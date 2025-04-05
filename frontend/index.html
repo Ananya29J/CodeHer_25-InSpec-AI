@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InSpec AI - Vehicle Defect Detection System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">InSpec<span>AI</span></div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#upload">Detect Defects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="hamburger" id="menuButton">☰</button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="closeMenu">✕</button>
+        <div class="logo" style="margin-bottom: 2rem;">InSpec<span>AI</span></div>
+        <ul class="mobile-nav-links">
+            <li><a href="#features" class="mobile-link">Features</a></li>
+            <li><a href="#how-it-works" class="mobile-link">How It Works</a></li>
+            <li><a href="#upload" class="mobile-link">Detect Defects</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Vehicle Defect Severity Detection System</h1>
+            <p>Upload images of your vehicle's potential defects and our AI-powered system will classify them into three severity levels: MINOR, MODERATE, or SEVERE to help you prioritize repairs.</p>
+            <a href="#upload" class="btn">Analyze Defect Severity Now</a>
+        </div>
+    </section>
+    
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Defect Severity Detection</h2>
+                <p>Our AI system focuses on accurately classifying vehicle defects by severity level</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto 3rem; text-align: center;">
+                <p>The AutoDiagnose system uses advanced image recognition and machine learning to analyze vehicle defect images and classify them into three severity categories. This helps you prioritize repairs and understand the urgency of maintenance issues.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-img" style="background-color: #27ae60; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+                        MINOR
+                    </div>
+                    <div class="feature-content">
+                        <h3>Minor Severity</h3>
+                        <p>Issues that don't affect vehicle performance or safety significantly. Can be addressed during routine maintenance with limited urgency.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Cosmetic scratches</li>
+                            <li>Early signs of wear</li>
+                            <li>Non-essential component issues</li>
+                            <li>Minor fluid seepage</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-img" style="background-color: #f39c12; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+                        MODERATE
+                    </div>
+                    <div class="feature-content">
+                        <h3>Moderate Severity</h3>
+                        <p>Issues that affect vehicle performance and may eventually impact safety. Should be addressed within the next 500 miles.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Significant brake pad wear</li>
+                            <li>Minor to moderate fluid leaks</li>
+                            <li>Belt wear beyond 50%</li>
+                            <li>Suspension component wear</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-img" style="background-color: #c0392b; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+                        SEVERE
+                    </div>
+                    <div class="feature-content">
+                        <h3>Severe Severity</h3>
+                        <p>Dangerous issues that significantly compromise vehicle safety and performance. Vehicle should be repaired immediately or not driven.</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li>Brake failure risk</li>
+                            <li>Significant structural damage</li>
+                            <li>Major fluid leaks</li>
+                            <li>Tire sidewall damage/blowout risk</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="max-width: 900px; margin: 3rem auto 0; text-align: center;">
+                <h3 style="margin-bottom: 1rem; color: var(--secondary);">How Our AI Classifies Defect Severity</h3>
+                <p>Our proprietary AI compares your vehicle's images against a database of over xxx defect images, considering factors like defect location, component type, extent of damage, and impact on vehicle systems. The severity rating is determined through a comprehensive analysis of these factors to provide the most accurate assessment possible.</p>
+                <a href="#upload" class="btn" style="margin-top: 1.5rem;">Try Defect Detection Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Severity Detection Works</h2>
+                <p>Our AI accurately classifies vehicle defects into severity levels in just a few simple steps</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload Photos</h3>
+                    <p>Take clear photos of the potential defect from multiple angles and upload them to our system.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Vehicle Details</h3>
+                    <p>Enter your vehicle's make, model, year, and information about the specific component for context.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>AI Severity Analysis</h3>
+                    <p>Our AI classifies the defect into one of three severity categories: Minor, Moderate, or Severe.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Get Severity Report</h3>
+                    <p>Receive a detailed report explaining the severity classification, recommended timeframe for repairs, safety implications, and nearby repair options.</p>
+                </div>
+            </div>
+            
+            <div style="max-width: 800px; margin: 3rem auto 0; background-color: #f5f5f5; padding: 2rem; border-radius: 10px;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--secondary);">Our Severity Classification System</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 30px; height: 30px; background-color: #27ae60; border-radius: 50%; margin-right: 1rem;"></div>
+                        <div>
+                            <strong>MINOR:</strong> Limited impact, address during routine maintenance
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 30px; height: 30px; background-color: #f39c12; border-radius: 50%; margin-right: 1rem;"></div>
+                        <div>
+                            <strong>MODERATE:</strong> Significant impact, repair within 500 miles
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 30px; height: 30px; background-color: #c0392b; border-radius: 50%; margin-right: 1rem;"></div>
+                        <div>
+                            <strong>SEVERE:</strong> Safety risk, repair immediately
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="upload-section" id="upload">
+        <div class="container">
+            <div class="section-title">
+                <h2>Detect Vehicle Defects</h2>
+                <p>Upload images of potential defects and get instant AI-powered analysis</p>
+            </div>
+            
+            <div class="upload-container">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📷</div>
+                    <h3 class="upload-text">Drag & Drop Images Here</h3>
+                    <p>
+                </div>
+                
+                <div class="vehicle-form">
+                    <div class="form-group">
+                        <label for="make">Vehicle Make</label>
+                        <input type="text" id="make" placeholder="e.g., Toyota, Honda, Ford">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="model">Vehicle Model</label>
+                        <input type="text" id="model" placeholder="e.g., Camry, Civic, F-150">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="year">Vehicle Year</label>
+                        <select id="year">
+                            <option value="">Select Year</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Your Location</label>
+                        <input type="text" id="location" placeholder="Enter your city or pin code">
+                    </div>
+                </div>
+                
+                <button class="btn" style="width: 100%;" onclick="showResults()">Analyze Defect</button>
+            </div>
+            
+            <div class="results-section" id="resultsSection">
+                <div class="section-title">
+                    <h2>Defect Analysis Results</h2>
+                    <p>Our AI has analyzed your vehicle's condition</p>
+                </div>
+                
+                <div class="results-container">
+                    <div class="result-header">
+                        <span class="severity-badge severity-moderate">MODERATE SEVERITY</span>
+                    </div>
+                    
+                    <div class="defect-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Severity Level:</span>
+                            <span><strong>MODERATE</strong> - Should be repaired within the next 500 miles</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Why This Rating:</span>
+                            <span>The AI has detected approximately 65% wear. While this doesn't present an immediate safety risk, continuing to drive beyond 500 miles may lead to reduced braking performance and potential damage to other components.</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Severity Scale:</span>
+                            <div style="display: flex; margin-top: 0.5rem;">
+                                <div style="flex: 1; text-align: center; padding: 0.5rem; background-color: #27ae60; color: white; border-radius: 5px 0 0 5px;">MINOR</div>
+                                <div style="flex: 1; text-align: center; padding: 0.5rem; background-color: #f39c12; color: white; border: 2px solid black; font-weight: bold;">MODERATE</div>
+                                <div style="flex: 1; text-align: center; padding: 0.5rem; background-color: #c0392b; color: white; border-radius: 0 5px 5px 0;">SEVERE</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="repair-estimate">
+                        <div class="estimate-header">
+                            <h3 class="estimate-title">Repair Cost Estimate</h3>
+                            <span class="estimate-price">rs - rs</span>
+                        </div>
+                    </div>
+                    
+                    <div class="repair-shops">
+                        <h3>Recommended Repair Shops Near You</h3>
+                        
+                        <div class="shop-cards">
+                            <div class="shop-card">
+                                <div class="shop-img">
+                                    <img src="/api/placeholder/250/150" alt="Mike's Auto Service">
+                                </div>
+                                <div class="shop-content">
+                                    <h4 class="shop-name">Mike's Auto Service</h4>
+                                    <p class="shop-location">2.3 miles away • 1234 Main St</p>
+                                    <div class="shop-rating">★★★★★ (124 reviews)</div>
+                                    <p>Specializes in brake systems with same-day service available</p>
+                                    <a href="#" class="btn" style="width: 100%; margin-top: 1rem;">Book Appointment</a>
+                                </div>
+                            </div>
+                            
+                            <div class="shop-card">
+                                <div class="shop-img">
+                                    <img src="/api/placeholder/250/150" alt="QuickFix Auto">
+                                </div>
+                                <div class="shop-content">
+                                    <h4 class="shop-name">QuickFix Auto</h4>
+                                    <p class="shop-location">3.7 miles away • 567 Oak Dr</p>
+                                    <div class="shop-rating">★★★★☆ (86 reviews)</div>
+                                    <p>10% discount for first-time customers, Toyota certified</p>
+                                    <a href="#" class="btn" style="width: 100%; margin-top: 1rem;">Book Appointment</a>
+                                </div>
+                            </div>
+                            
+                            <div class="shop-card">
+                                <div class="shop-img">
+                                    <img src="/api/placeholder/250/150" alt="AutoCare Plus">
+                                </div>
+                                <div class="shop-content">
+                                    <h4 class="shop-name">AutoCare Plus</h4>
+                                    <p class="shop-location">5.1 miles away • 890 Pine Ave</p>
+                                    <div class="shop-rating">★★★★☆ (201 reviews)</div>
+                                    <p>3-year warranty on all brake work, free shuttle service</p>
+                                    <a href="#" class="btn" style="width: 100%; margin-top: 1rem;">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq" id="faq" style="padding: 4rem 0; background-color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our vehicle defect detection system</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 0.8rem; color: var(--secondary);">How accurate is the defect detection?</h3>
+                    <p>Our AI-powered system has a 94% accuracy rate for common vehicle defects. The system is trained on millions of images and continuously improves with more data.</p>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 0.8rem; color: var(--secondary);">What types of defects can the system detect?</h3>
+                    <p>The system can detect a wide range of mechanical and cosmetic issues including brake problems, engine malfunctions, transmission issues, suspension problems, tire wear, body damage, electrical system failures, and many more.</p>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 0.8rem; color: var(--secondary);">How are repair costs calculated?</h3>
+                    <p>Repair costs are calculated based on your vehicle's make, model, year, and your location. We use real-time data from thousands of repair shops nationwide, combined with parts pricing data to provide you with an accurate estimate range.</p>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 0.8rem; color: var(--secondary);">How are the three severity levels determined?</h3>
+                    <p>Our AI analyzes multiple factors to determine severity level: MINOR (cosmetic or minor maintenance issues with limited impact on safety), MODERATE (issues affecting performance requiring attention within 500 miles), and SEVERE (critical issues that pose immediate safety risks requiring immediate repair).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AutoDiagnose</h3>
+                    <p style="color: #bdc3c7; margin-bottom: 1rem;">Helping vehicle owners make informed repair decisions with AI-powered defect analysis.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#upload">Detect Defects</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@autodiagnose.com">info@inspecai.com</a></li>
+                        <li><a href="tel:+18001234567">91-xxxxx-xxxxx</a></li>
+                        <li><a href="#">SRMIST VDP Cheenai,Tamil Nadu</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 InSpec AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
