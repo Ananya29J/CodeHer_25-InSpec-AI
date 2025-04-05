@@ -27,8 +27,7 @@ An automated solution that can detect vehicle defects, assess their severity, pr
 
 ### ⟫ Integration Layer <br/>
 • API for external services<br/>
-• Supabase for real-time updates<br/>
-• Google OAuth for authentication<br/>
+
 
 
 
