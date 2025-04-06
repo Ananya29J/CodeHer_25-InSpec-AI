@@ -1,0 +1,35 @@
+{
+    "TOYOTA": {
+      "Camry": {
+        "door": 12000,
+        "bumper": 8000,
+        "fender": 5000,
+        "light": 3000,
+        "windshield": 15000,
+        "bonnet": 10000,
+        "dickey": 9000
+      }
+    },
+    "HONDA": {
+      "Civic": {
+        "door": 11000,
+        "bumper": 7500,
+        "fender": 4800,
+        "light": 2800,
+        "windshield": 14000,
+        "bonnet": 9500,
+        "dickey": 8500
+      }
+    },
+    "NISSAN": {
+      "Rogue": {
+        "door": 10500,
+        "bumper": 7000,
+        "fender": 4500,
+        "light": 2500,
+        "windshield": 13500,
+        "bonnet": 9000,
+        "dickey": 8000
+      }
+    }
+  }
