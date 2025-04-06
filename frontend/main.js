@@ -132,7 +132,7 @@ function showPreview(file) {
     reader.readAsDataURL(file);
 }
 
-// Replace your existing showResults function with this one
+// Updated showResults function
 function showResults() {
     const resultsSection = document.getElementById('resultsSection');
     
@@ -151,14 +151,6 @@ function showResults() {
         return;
     }
     
-    // Create form data
-    const formData = new FormData();
-    formData.append('image', uploadedFile);
-    formData.append('make', make);
-    formData.append('model', model);
-    formData.append('defectArea', defectArea);
-    formData.append('year', year);
-    
     // Show loading state
     resultsSection.innerHTML = `
         <div class="section-title">
@@ -172,10 +164,18 @@ function showResults() {
     resultsSection.style.display = 'block';
     resultsSection.scrollIntoView({ behavior: 'smooth' });
     
-    // Send to backend API
+    // Send to backend API - Updated to use JSON instead of FormData
     fetch('/api/predict', {
         method: 'POST',
-        body: formData
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            make: make,
+            model: model,
+            defectArea: defectArea,
+            year: year
+        })
     })
     .then(response => {
         if (!response.ok) {
@@ -197,6 +197,7 @@ function showResults() {
     });
 }
 
+// Updated displayResults function with fixed image placeholders
 function displayResults(data, make, model, defectArea, year) {
     const resultsSection = document.getElementById('resultsSection');
     const severityClass = `severity-${data.severity.toLowerCase()}`;
@@ -249,10 +250,9 @@ function displayResults(data, make, model, defectArea, year) {
                 <h3>Recommended Repair Shops Near You</h3>
                 
                 <div class="shop-cards">
-                    <!-- Shop cards from original HTML -->
                     <div class="shop-card">
                         <div class="shop-img">
-                            <img src="/api/placeholder/250/150" alt="Auto Service">
+                            <img src="https://placehold.co/250x150" alt="Auto Service">
                         </div>
                         <div class="shop-content">
                             <h4 class="shop-name">Auto Service</h4>
@@ -263,7 +263,31 @@ function displayResults(data, make, model, defectArea, year) {
                         </div>
                     </div>
                     
-                    <!-- More shop cards as in your original HTML -->
+                    <div class="shop-card">
+                        <div class="shop-img">
+                            <img src="https://placehold.co/250x150" alt="QuickFix Auto">
+                        </div>
+                        <div class="shop-content">
+                            <h4 class="shop-name">QuickFix Auto</h4>
+                            <p class="shop-location">3.7 km away • Ashok Nagar</p>
+                            <div class="shop-rating">★★★★☆ (86 reviews)</div>
+                            <p>10% discount for first-time customers, ${make} certified</p>
+                            <a href="#" class="btn" style="width: 100%; margin-top: 1rem;">Book Appointment</a>
+                        </div>
+                    </div>
+                    
+                    <div class="shop-card">
+                        <div class="shop-img">
+                            <img src="https://placehold.co/250x150" alt="AutoCare Plus">
+                        </div>
+                        <div class="shop-content">
+                            <h4 class="shop-name">AutoCare Plus</h4>
+                            <p class="shop-location">5.1 km away • Anna Nagar</p>
+                            <div class="shop-rating">★★★★☆ (201 reviews)</div>
+                            <p>3-year warranty on all ${defectArea.toLowerCase()} work, free shuttle service</p>
+                            <a href="#" class="btn" style="width: 100%; margin-top: 1rem;">Book Appointment</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
