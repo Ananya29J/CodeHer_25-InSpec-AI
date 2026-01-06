@@ -7,7 +7,7 @@ Hosted by - Anna University<br/>
 
 # InSpec AI
 
-## ᓚ PROBLEM STATEMENT<br/>
+## ᓚ PROPOSED SOLUTION <br/>
 
 An automated solution that can detect vehicle defects, assess their severity, provide accurate cost estimates, and connect users with qualified repair facilities<br/>
 
